@@ -4,12 +4,65 @@ MAIN STYLES
 html {
   margin: 0; }
   html body {
-    background: linear-gradient(rgba(45, 28, 93, 0.6), rgba(45, 28, 93, 0.6)), url("images/background.png");
+    margin: 0;
+    background: linear-gradient(rgba(45, 28, 93, 0.75), rgba(45, 28, 93, 0.75)), url("images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; }
-    html body div {
-      width: 100vw;
-      height: 100vh; }
+    background-position: center;
+    height: 100vh; }
+    html body .container {
+      width: 80%;
+      height: 90%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto; }
+      html body .container .pic-numbers {
+        max-width: 561px;
+        width: 100%; }
+        html body .container .pic-numbers img {
+          width: 100%; }
+      html body .container .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        max-width: 760px; }
+        html body .container .main-wrapper h1 {
+          color: white;
+          font-family: "Roboto", sans-serif;
+          font-size: 80px;
+          font-weight: 700;
+          line-height: 100%;
+          margin: 0; }
+        html body .container .main-wrapper input {
+          color: #d4d4d4;
+          background: rgba(23, 14, 49, 0.72);
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 28px;
+          width: 375px;
+          border: none;
+          padding: 14px 16px;
+          margin: 24px 0 8px; }
+        html body .container .main-wrapper label {
+          color: #dedede;
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          width: 375px;
+          margin: 0 0 24px; }
+        html body .container .main-wrapper button {
+          color: #c2c2c2;
+          background: #eeeeee;
+          font-family: "Inter", sans-serif;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 21px;
+          padding: 8px 16px;
+          width: 256px;
+          border: none; }
 
 /*# sourceMappingURL=styles.css.map */

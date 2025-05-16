@@ -6,6 +6,12 @@ let button = document.querySelector('button')
 let wrongAnsw = document.querySelector('.wrong-answer')
 let victory = document.querySelector('.victory')
 let title = document.querySelector('h1')
+let picNumbers = document.querySelector('.pic-numbers')
+let mainWrapper = document.querySelector('.main-wrapper')
+let higher = document.getElementById('higher')
+let lower = document.getElementById('lower')
+let shot = document.getElementById('shot')
+let newGame = document.querySelector('.new-game')
 
 input.addEventListener('input', () => {
     if (input.value.trim() !== '') {
@@ -26,12 +32,27 @@ button.addEventListener('click', (event) => {
     let number = input.valueAsNumber
     
     if (requiredNumber === number) {
-        wrongAnsw.style.display = 'none'
         victory.style.display = 'flex'
+        picNumbers.style.display = 'none'
+        mainWrapper.style.display = 'none'
+        wrongAnsw.style.display = 'none'
 
+        shot.innerHTML = attempt
     } else {
         victory.style.display = 'none'
+        picNumbers.style.display = 'flex'
+        mainWrapper.style.display = 'flex'
         wrongAnsw.style.display = 'flex'   
         title.style.fontSize = '40px'
+
+        if (requiredNumber > number) {
+            higher.style.display = 'block'
+            lower.style.display = 'none'
+        } else {
+            lower.style.display = 'block'
+            higher.style.display = 'none'
+        }
     }
+
+    input.value = ''
 })

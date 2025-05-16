@@ -48,6 +48,10 @@ html {
             html body .container .main-wrapper .wrong-answer .tip h2 {
               font-weight: 700;
               font-size: 64px; }
+            html body .container .main-wrapper .wrong-answer .tip #higher {
+              display: none; }
+            html body .container .main-wrapper .wrong-answer .tip #lower {
+              display: none; }
             html body .container .main-wrapper .wrong-answer .tip p {
               font-weight: 400;
               font-size: 32px; }

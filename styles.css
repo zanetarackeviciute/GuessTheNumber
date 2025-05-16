@@ -5,7 +5,7 @@ html {
   margin: 0; }
   html body {
     margin: 0;
-    background: linear-gradient(rgba(45, 28, 93, 0.75), rgba(45, 28, 93, 0.75)), url("images/background.png");
+    background: linear-gradient(rgba(45, 28, 93, 0.95), rgba(45, 28, 93, 0.95)), url("images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -28,6 +28,34 @@ html {
         flex-direction: column;
         text-align: left;
         max-width: 760px; }
+        html body .container .main-wrapper .wrong-answer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 34px 37px 49.5px 32px;
+          display: flex;
+          background: rgba(170, 2, 2, 0.33); }
+          html body .container .main-wrapper .wrong-answer img {
+            width: 146px;
+            height: 148px;
+            margin-right: 20px; }
+          html body .container .main-wrapper .wrong-answer .tip {
+            color: white;
+            font-family: "Roboto", sans-serif;
+            line-height: 100%;
+            margin: 0; }
+            html body .container .main-wrapper .wrong-answer .tip h2 {
+              font-weight: 700;
+              font-size: 64px; }
+            html body .container .main-wrapper .wrong-answer .tip p {
+              font-weight: 400;
+              font-size: 32px; }
+              html body .container .main-wrapper .wrong-answer .tip p span {
+                background: #d31e3e;
+                padding: 1px 8px;
+                font-weight: 900;
+                font-size: 32px; }
         html body .container .main-wrapper h1 {
           color: white;
           font-family: "Roboto", sans-serif;
@@ -35,34 +63,44 @@ html {
           font-weight: 700;
           line-height: 100%;
           margin: 0; }
-        html body .container .main-wrapper input {
-          color: #d4d4d4;
-          background: rgba(23, 14, 49, 0.72);
-          font-family: "Inter", sans-serif;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 28px;
-          width: 375px;
-          border: none;
-          padding: 14px 16px;
-          margin: 24px 0 8px; }
-        html body .container .main-wrapper label {
-          color: #dedede;
-          font-family: "Inter", sans-serif;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 20px;
-          width: 375px;
-          margin: 0 0 24px; }
-        html body .container .main-wrapper button {
-          color: #c2c2c2;
-          background: #eeeeee;
-          font-family: "Inter", sans-serif;
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 21px;
-          padding: 8px 16px;
-          width: 256px;
-          border: none; }
+        html body .container .main-wrapper #guess {
+          display: flex;
+          flex-direction: column; }
+          html body .container .main-wrapper #guess input {
+            color: #d4d4d4;
+            background: rgba(23, 14, 49, 0.72);
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            width: 375px;
+            border: none;
+            padding: 14px 16px;
+            margin: 24px 0 8px;
+            appearance: none;
+            -moz-appearance: textfield; }
+            html body .container .main-wrapper #guess input::-webkit-outer-spin-button, html body .container .main-wrapper #guess input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0; }
+          html body .container .main-wrapper #guess label {
+            color: #dedede;
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            width: 375px;
+            margin: 0 0 24px; }
+          html body .container .main-wrapper #guess button {
+            color: #c2c2c2;
+            background: #eeeeee;
+            font-family: "Inter", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            padding: 8px 16px;
+            width: 256px;
+            border: none; }
+      html body .container .victory {
+        display: none; }
 
 /*# sourceMappingURL=styles.css.map */

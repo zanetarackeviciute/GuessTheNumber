@@ -15,10 +15,27 @@
             <img src="images/numbers.png" alt="numbers">
         </div>
         <div class="main-wrapper">
+            <div class="wrong-answer">
+                <img src="images/Frowning-face.png" alt="face">
+                <div class="tip">
+                    <h2>Deja, Neatspėjote!</h2>
+                    <p id="higher">Spėkite<span> Didesnį </span>skaičių.</p>
+                    <!-- <p id="lower">Spėkite<span> Mažesnį </span>skaičių.</p> -->
+                </div>
+            </div>
+
             <h1>Spėkite skaičių tarp 1 ir 100</h1>
-            <input id="number" type="text" placeholder="pvz., 100">
-            <label for="number">įveskite skaičių nuo 1 iki 100</label>
-            <button>Spėti</button>
+            <form id="guess">
+                <input id="number" type="number" placeholder="pvz., 100" min="1" max="100">
+                <label for="number">įveskite skaičių nuo 1 iki 100</label>
+                <button type="submit">Spėti</button>
+            </form>
+        </div>
+
+        <div class="victory">
+            <h2>Atspėjote !</h2>
+            <p>Atspėti jums pavyko iš <span id="shot"></span> !</p>
+            <button class="new-game">Žaisti iš naujo</button>
         </div>
     </div>
 

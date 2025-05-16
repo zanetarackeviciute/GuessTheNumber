@@ -26,6 +26,11 @@ button.addEventListener('click', (event) => {
     event.preventDefault()
     attempt++
     
+    if (input.valueAsNumber < 1 || input.valueAsNumber > 100) {
+        alert('Neteisinga įvestis!')
+        location.reload()
+    }
+    
     let number = input.valueAsNumber
     
     if (requiredNumber === number) {

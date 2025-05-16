@@ -37,13 +37,13 @@ html {
           display: none;
           align-items: center;
           justify-content: center;
-          width: 100%;
+          width: 90%;
           padding: 34px 37px 49.5px 32px;
           background: rgba(170, 2, 2, 0.33);
           margin-bottom: 32px; }
           html body .container .main-wrapper .wrong-answer img {
-            width: 146px;
-            height: 148px;
+            max-width: 146px;
+            max-height: 148px;
             margin-right: 20px; }
           html body .container .main-wrapper .wrong-answer .tip {
             color: white;
@@ -52,19 +52,19 @@ html {
             margin: 0; }
             html body .container .main-wrapper .wrong-answer .tip h2 {
               font-weight: 700;
-              font-size: 64px; }
+              font-size: clamp(24px 10vw 64px); }
             html body .container .main-wrapper .wrong-answer .tip #higher {
               display: none; }
             html body .container .main-wrapper .wrong-answer .tip #lower {
               display: none; }
             html body .container .main-wrapper .wrong-answer .tip p {
               font-weight: 400;
-              font-size: 32px; }
+              font-size: clamp(12px 10vw 32px); }
               html body .container .main-wrapper .wrong-answer .tip p span {
                 background: #d31e3e;
                 padding: 1px 8px;
                 font-weight: 900;
-                font-size: 32px; }
+                font-size: clamp(12px 10vw 32px); }
         html body .container .main-wrapper h1 {
           color: white;
           font-family: "Roboto", sans-serif;
@@ -80,7 +80,7 @@ html {
             background: rgba(23, 14, 49, 0.72);
             font-family: "Inter", sans-serif;
             font-weight: 400;
-            font-size: 18px;
+            font-size: clamp(10px 10vw 18px);
             line-height: 28px;
             max-width: 375px;
             border: none;
@@ -95,7 +95,7 @@ html {
             color: #dedede;
             font-family: "Inter", sans-serif;
             font-weight: 400;
-            font-size: 14px;
+            font-size: clamp(8px 10vw 14px);
             line-height: 20px;
             max-width: 375px;
             margin: 0 0 24px; }
@@ -105,7 +105,7 @@ html {
             background: #eeeeee;
             font-family: "Inter", sans-serif;
             font-weight: 700;
-            font-size: 18px;
+            font-size: clamp(10px 10vw 18px);
             line-height: 21px;
             padding: 8px 16px;
             max-width: 256px;
@@ -124,9 +124,9 @@ html {
           max-width: 250px;
           height: 250px; }
         html body .container .victory h2 {
-          font-size: 80px; }
+          font-size: clamp(30px 10vw 80px); }
         html body .container .victory p {
-          font-size: 40px;
+          font-size: clamp(18px 10vw 40px);
           padding: 0 3px 0 4px; }
           html body .container .victory p span {
             background: #9747ff; }
@@ -136,7 +136,7 @@ html {
           background: #eeeeee;
           font-family: "Inter", sans-serif;
           font-weight: 700;
-          font-size: 18px;
+          font-size: clamp(10px 10vw 18px);
           line-height: 21px;
           padding: 8px 16px;
           max-width: 256px;

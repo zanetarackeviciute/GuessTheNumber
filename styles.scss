@@ -47,14 +47,14 @@ html {
                     display: none;
                     align-items: center;
                     justify-content: center;
-                    width: 100%;
+                    width: 90%;
                     padding: 34px 37px 49.5px 32px;
                     background: rgba(170, 2, 2, 0.33);
                     margin-bottom: 32px;
 
                     img {
-                        width: 146px;
-                        height: 148px;
+                        max-width: 146px;
+                        max-height: 148px;
                         margin-right: 20px;
                     }
 
@@ -66,9 +66,7 @@ html {
                         
                         h2 {
                             font-weight: 700;
-                            font-size: 64px;
-
-
+                            font-size: clamp(24px 10vw 64px);
                         }
 
                         #higher {
@@ -81,13 +79,13 @@ html {
 
                         p {
                             font-weight: 400;
-                            font-size: 32px;
+                            font-size: clamp(12px 10vw 32px);
                         
                             span {
                                 background: rgba(211, 30, 62, 1);
                                 padding: 1px 8px;
                                 font-weight: 900;
-                                font-size: 32px;
+                                font-size: clamp(12px 10vw 32px);
                             }
                         }
                     }
@@ -111,7 +109,7 @@ html {
                         background: rgba(23, 14, 49, 0.72);
                         font-family: "Inter", sans-serif;
                         font-weight: 400;
-                        font-size: 18px;
+                        font-size: clamp(10px 10vw 18px);
                         line-height: 28px;
                         max-width: 375px;
                         border: none;
@@ -131,7 +129,7 @@ html {
                         color: rgba(222, 222, 222, 1);
                         font-family: "Inter", sans-serif;
                         font-weight: 400;
-                        font-size: 14px;
+                        font-size: clamp(8px 10vw 14px);;
                         line-height: 20px;
                         max-width: 375px;
                         margin: 0 0 24px;
@@ -143,7 +141,7 @@ html {
                         background: rgba(238, 238, 238, 1);
                         font-family: "Inter", sans-serif;
                         font-weight: 700;
-                        font-size: 18px;
+                        font-size: clamp(10px 10vw 18px);
                         line-height: 21px;
                         padding: 8px 16px;
                         max-width: 256px;
@@ -169,11 +167,11 @@ html {
                 }
 
                 h2 {
-                    font-size: 80px;
+                    font-size: clamp(30px 10vw 80px);
                 }
 
                 p {
-                    font-size: 40px;
+                    font-size: clamp(18px 10vw 40px);
                     padding: 0 3px 0 4px;
                     
                     span {
@@ -187,7 +185,7 @@ html {
                     background: rgba(238, 238, 238, 1);
                     font-family: "Inter", sans-serif;
                     font-weight: 700;
-                    font-size: 18px;
+                    font-size: clamp(10px 10vw 18px);
                     line-height: 21px;
                     padding: 8px 16px;
                     max-width: 256px;

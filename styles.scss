@@ -10,16 +10,23 @@ html {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: 100vh;
+        min-height: 100vh;
 
         .container {
             width: 80%;
-            height: 90%;
             display: flex;
             text-align: center;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
+            height: auto;
+
+            @media only screen and (max-width: 900px) {
+                display: block;
+                .pic-numbers {
+                    max-width: 300px;
+                }
+            }
 
             .pic-numbers {
                 max-width: 561px;
@@ -60,6 +67,8 @@ html {
                         h2 {
                             font-weight: 700;
                             font-size: 64px;
+
+
                         }
 
                         #higher {
@@ -87,7 +96,7 @@ html {
                 h1 {
                     color: rgba(255, 255, 255, 1);
                     font-family: "Roboto", sans-serif;
-                    font-size: 80px;
+                    font-size: clamp(30px 10vw 80px);
                     font-weight: 700;
                     line-height: 100%;
                     margin: 0;
@@ -104,7 +113,7 @@ html {
                         font-weight: 400;
                         font-size: 18px;
                         line-height: 28px;
-                        width: 375px;
+                        max-width: 375px;
                         border: none;
                         padding: 14px 16px;
                         margin: 24px 0 8px;
@@ -124,7 +133,7 @@ html {
                         font-weight: 400;
                         font-size: 14px;
                         line-height: 20px;
-                        width: 375px;
+                        max-width: 375px;
                         margin: 0 0 24px;
                     }
 
@@ -137,7 +146,7 @@ html {
                         font-size: 18px;
                         line-height: 21px;
                         padding: 8px 16px;
-                        width: 256px;
+                        max-width: 256px;
                         border: none;
                     }
                 }
@@ -155,7 +164,7 @@ html {
                 font-weight: 700;
 
                 img {
-                    width: 250px;
+                    max-width: 250px;
                     height: 250px;
                 }
 
@@ -181,7 +190,7 @@ html {
                     font-size: 18px;
                     line-height: 21px;
                     padding: 8px 16px;
-                    width: 256px;
+                    max-width: 256px;
                     border: none;
                 }
             }

@@ -11,7 +11,7 @@ html {
     background-position: center;
     min-height: 100vh; }
     html body .container {
-      width: 80%;
+      width: 95%;
       display: flex;
       text-align: center;
       align-items: center;
@@ -20,7 +20,7 @@ html {
       height: auto; }
       @media only screen and (max-width: 900px) {
         html body .container {
-          display: block; }
+          flex-direction: column; }
           html body .container .pic-numbers {
             max-width: 300px; } }
       html body .container .pic-numbers {

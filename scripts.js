@@ -37,7 +37,7 @@ button.addEventListener('click', (event) => {
         mainWrapper.style.display = 'none'
         wrongAnsw.style.display = 'none'
 
-        shot.innerHTML = attempt
+        shot.innerHTML = attempt + ' karto'
     } else {
         victory.style.display = 'none'
         picNumbers.style.display = 'flex'
@@ -55,4 +55,9 @@ button.addEventListener('click', (event) => {
     }
 
     input.value = ''
+})
+
+
+newGame.addEventListener('click', () => {
+    location.reload()
 })

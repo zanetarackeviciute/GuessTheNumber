@@ -29,13 +29,13 @@ html {
         text-align: left;
         max-width: 760px; }
         html body .container .main-wrapper .wrong-answer {
-          display: flex;
+          display: none;
           align-items: center;
           justify-content: center;
           width: 100%;
           padding: 34px 37px 49.5px 32px;
-          display: flex;
-          background: rgba(170, 2, 2, 0.33); }
+          background: rgba(170, 2, 2, 0.33);
+          margin-bottom: 32px; }
           html body .container .main-wrapper .wrong-answer img {
             width: 146px;
             height: 148px;
@@ -91,6 +91,7 @@ html {
             width: 375px;
             margin: 0 0 24px; }
           html body .container .main-wrapper #guess button {
+            cursor: pointer;
             color: #c2c2c2;
             background: #eeeeee;
             font-family: "Inter", sans-serif;
@@ -121,6 +122,7 @@ html {
           html body .container .victory p span {
             background: #9747ff; }
         html body .container .victory button {
+          cursor: pointer;
           color: black;
           background: #eeeeee;
           font-family: "Inter", sans-serif;

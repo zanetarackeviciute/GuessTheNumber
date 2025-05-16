@@ -1,17 +1,16 @@
 const requiredNumber = Math.floor(Math.random() * 100) + 1
-console.log(requiredNumber)
 
-let input = document.getElementById('number')
-let button = document.querySelector('button')
-let wrongAnsw = document.querySelector('.wrong-answer')
-let victory = document.querySelector('.victory')
-let title = document.querySelector('h1')
-let picNumbers = document.querySelector('.pic-numbers')
-let mainWrapper = document.querySelector('.main-wrapper')
-let higher = document.getElementById('higher')
-let lower = document.getElementById('lower')
-let shot = document.getElementById('shot')
-let newGame = document.querySelector('.new-game')
+const input = document.getElementById('number')
+const button = document.querySelector('button')
+const wrongAnsw = document.querySelector('.wrong-answer')
+const victory = document.querySelector('.victory')
+const title = document.querySelector('h1')
+const picNumbers = document.querySelector('.pic-numbers')
+const mainWrapper = document.querySelector('.main-wrapper')
+const higher = document.getElementById('higher')
+const lower = document.getElementById('lower')
+const shot = document.getElementById('shot')
+const newGame = document.querySelector('.new-game')
 
 input.addEventListener('input', () => {
     if (input.value.trim() !== '') {
@@ -26,9 +25,7 @@ let attempt = 0
 button.addEventListener('click', (event) => {
     event.preventDefault()
     attempt++
-    console.log(attempt)
     
-    console.log(input.valueAsNumber)
     let number = input.valueAsNumber
     
     if (requiredNumber === number) {

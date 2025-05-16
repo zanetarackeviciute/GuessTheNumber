@@ -137,6 +137,43 @@ html {
             }
             .victory {
                 display: none;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                color: rgba(255, 255, 255, 1);
+                font-family: "Roboto", sans-serif;
+                line-height: 100%;
+                font-weight: 700;
+
+                img {
+                    width: 250px;
+                    height: 250px;
+                }
+
+                h2 {
+                    font-size: 80px;
+                }
+
+                p {
+                    font-size: 40px;
+                    padding: 0 3px 0 4px;
+                    span {
+                        background: rgba(151, 71, 255, 1);
+                    }
+                }
+
+                button {
+                        color: rgba(0, 0, 0, 1);
+                        background: rgba(238, 238, 238, 1);
+                        font-family: "Inter", sans-serif;
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 21px;
+                        padding: 8px 16px;
+                        width: 256px;
+                        border: none;
+                }
             }
         }
     }

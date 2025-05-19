@@ -2,7 +2,11 @@
 MAIN STYLES
 ==================== */
 html {
-  margin: 0; }
+  margin: 0;
+  box-sizing: border-box; }
+  html *, html * ::before,
+  html *, html *::after {
+    box-sizing: inherit; }
   html body {
     margin: 0;
     background: linear-gradient(rgba(45, 28, 93, 0.95), rgba(45, 28, 93, 0.95)), url("images/background.png");
@@ -11,36 +15,51 @@ html {
     background-position: center;
     min-height: 100vh; }
     html body .container {
-      width: 95%;
       display: flex;
+      flex-wrap: wrap;
       text-align: center;
       align-items: center;
       justify-content: center;
-      margin: 0 auto;
-      height: auto; }
+      margin: 0 auto; }
       @media only screen and (max-width: 900px) {
         html body .container {
-          flex-direction: column; }
-          html body .container .pic-numbers {
-            max-width: 300px; } }
+          flex-direction: column;
+          text-align: center;
+          margin: 15px; } }
       html body .container .pic-numbers {
+        flex: 0 0 auto;
         max-width: 561px;
         width: 100%; }
+        @media only screen and (max-width: 900px) {
+          html body .container .pic-numbers {
+            max-width: 300px; } }
         html body .container .pic-numbers img {
           width: 100%; }
       html body .container .main-wrapper {
         display: flex;
         flex-direction: column;
         text-align: left;
-        max-width: 760px; }
+        flex: 1 1 auto;
+        max-width: 760px;
+        margin: 0 auto 20px; }
         html body .container .main-wrapper .wrong-answer {
           display: none;
           align-items: center;
           justify-content: center;
+          max-width: 960px;
           width: 90%;
           padding: 34px 37px 49.5px 32px;
           background: rgba(170, 2, 2, 0.33);
-          margin-bottom: 32px; }
+          margin-bottom: 32px;
+          box-sizing: border-box; }
+          @media only screen and (max-width: 900px) {
+            html body .container .main-wrapper .wrong-answer {
+              margin: 0 auto;
+              padding: 0; } }
+          @media only screen and (max-width: 590px) {
+            html body .container .main-wrapper .wrong-answer {
+              display: flex;
+              flex-wrap: wrap; } }
           html body .container .main-wrapper .wrong-answer img {
             max-width: 146px;
             max-height: 148px;
@@ -48,29 +67,27 @@ html {
           html body .container .main-wrapper .wrong-answer .tip {
             color: white;
             font-family: "Roboto", sans-serif;
-            line-height: 100%;
             margin: 0; }
             html body .container .main-wrapper .wrong-answer .tip h2 {
               font-weight: 700;
-              font-size: clamp(24px 10vw 64px); }
+              font-size: clamp(24px, 10vw, 64px); }
             html body .container .main-wrapper .wrong-answer .tip #higher {
               display: none; }
             html body .container .main-wrapper .wrong-answer .tip #lower {
               display: none; }
             html body .container .main-wrapper .wrong-answer .tip p {
               font-weight: 400;
-              font-size: clamp(12px 10vw 32px); }
+              font-size: clamp(12px, 10vw, 32px); }
               html body .container .main-wrapper .wrong-answer .tip p span {
                 background: #d31e3e;
                 padding: 1px 8px;
                 font-weight: 900;
-                font-size: clamp(12px 10vw 32px); }
+                font-size: clamp(12px, 10vw, 32px); }
         html body .container .main-wrapper h1 {
           color: white;
           font-family: "Roboto", sans-serif;
-          font-size: clamp(30px 10vw 80px);
+          font-size: clamp(30px, 10vw, 80px);
           font-weight: 700;
-          line-height: 100%;
           margin: 0; }
         html body .container .main-wrapper #guess {
           display: flex;
@@ -80,8 +97,8 @@ html {
             background: rgba(23, 14, 49, 0.72);
             font-family: "Inter", sans-serif;
             font-weight: 400;
-            font-size: clamp(10px 10vw 18px);
-            line-height: 28px;
+            font-size: clamp(10px, 10vw, 18px);
+            width: 100%;
             max-width: 375px;
             border: none;
             padding: 14px 16px;
@@ -91,22 +108,28 @@ html {
             html body .container .main-wrapper #guess input::-webkit-outer-spin-button, html body .container .main-wrapper #guess input::-webkit-inner-spin-button {
               -webkit-appearance: none;
               margin: 0; }
+            @media only screen and (max-width: 428px) {
+              html body .container .main-wrapper #guess input {
+                max-width: 250px;
+                width: 100%; } }
           html body .container .main-wrapper #guess label {
             color: #dedede;
             font-family: "Inter", sans-serif;
             font-weight: 400;
-            font-size: clamp(8px 10vw 14px);
-            line-height: 20px;
+            font-size: clamp(8px, 10vw, 14px);
             max-width: 375px;
             margin: 0 0 24px; }
+            @media only screen and (max-width: 428px) {
+              html body .container .main-wrapper #guess label {
+                max-width: 150px;
+                width: 100%; } }
           html body .container .main-wrapper #guess button {
             cursor: pointer;
             color: #c2c2c2;
             background: #eeeeee;
             font-family: "Inter", sans-serif;
             font-weight: 700;
-            font-size: clamp(10px 10vw 18px);
-            line-height: 21px;
+            font-size: clamp(10px, 10vw, 18px);
             padding: 8px 16px;
             max-width: 256px;
             border: none; }
@@ -118,15 +141,17 @@ html {
         align-items: center;
         color: white;
         font-family: "Roboto", sans-serif;
-        line-height: 100%;
         font-weight: 700; }
+        @media only screen and (max-width: 900px) {
+          html body .container .victory {
+            margin-top: 20px; } }
         html body .container .victory img {
           max-width: 250px;
-          height: 250px; }
+          width: 100%; }
         html body .container .victory h2 {
-          font-size: clamp(30px 10vw 80px); }
+          font-size: clamp(30px, 10vw, 80px); }
         html body .container .victory p {
-          font-size: clamp(18px 10vw 40px);
+          font-size: clamp(18px, 10vw, 40px);
           padding: 0 3px 0 4px; }
           html body .container .victory p span {
             background: #9747ff; }
@@ -136,8 +161,7 @@ html {
           background: #eeeeee;
           font-family: "Inter", sans-serif;
           font-weight: 700;
-          font-size: clamp(10px 10vw 18px);
-          line-height: 21px;
+          font-size: clamp(10px, 10vw, 18px);
           padding: 8px 16px;
           max-width: 256px;
           border: none; }

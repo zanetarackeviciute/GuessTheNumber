@@ -3,6 +3,12 @@ MAIN STYLES
 ==================== */
 html {
     margin: 0;
+    box-sizing: border-box;
+
+    *, * ::before,
+    *, *::after {
+        box-sizing: inherit;
+    }
 
     body {
         margin: 0;
@@ -13,24 +19,27 @@ html {
         min-height: 100vh;
 
         .container {
-            width: 95%;
             display: flex;
+            flex-wrap: wrap;
             text-align: center;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            height: auto;
 
             @media only screen and (max-width: 900px) {
                 flex-direction: column;
-                .pic-numbers {
-                    max-width: 300px;
-                }
+                text-align: center;
+                margin: 15px;
             }
 
             .pic-numbers {
+                flex: 0 0 auto;
                 max-width: 561px;
                 width: 100%;
+
+                @media only screen and (max-width: 900px) {
+                        max-width: 300px;
+                    }
 
                 img {
                     width: 100%;
@@ -41,16 +50,30 @@ html {
                 display: flex;
                 flex-direction: column;
                 text-align: left;
+                flex: 1 1 auto;
                 max-width: 760px;
+                margin: 0 auto 20px;
 
                 .wrong-answer {
                     display: none;
                     align-items: center;
                     justify-content: center;
+                    max-width: 960px;
                     width: 90%;
                     padding: 34px 37px 49.5px 32px;
                     background: rgba(170, 2, 2, 0.33);
                     margin-bottom: 32px;
+                    box-sizing: border-box;
+
+                    @media only screen and (max-width: 900px) {
+                        margin: 0 auto;
+                        padding: 0;
+                    }
+
+                    @media only screen and (max-width: 590px) {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
 
                     img {
                         max-width: 146px;
@@ -61,12 +84,11 @@ html {
                     .tip {
                         color: rgba(255, 255, 255, 1);
                         font-family: "Roboto", sans-serif;
-                        line-height: 100%;
                         margin: 0;
                         
                         h2 {
                             font-weight: 700;
-                            font-size: clamp(24px 10vw 64px);
+                            font-size: clamp(24px, 10vw, 64px);
                         }
 
                         #higher {
@@ -79,13 +101,13 @@ html {
 
                         p {
                             font-weight: 400;
-                            font-size: clamp(12px 10vw 32px);
+                            font-size: clamp(12px, 10vw, 32px);
                         
                             span {
                                 background: rgba(211, 30, 62, 1);
                                 padding: 1px 8px;
                                 font-weight: 900;
-                                font-size: clamp(12px 10vw 32px);
+                                font-size: clamp(12px, 10vw, 32px);
                             }
                         }
                     }
@@ -94,9 +116,8 @@ html {
                 h1 {
                     color: rgba(255, 255, 255, 1);
                     font-family: "Roboto", sans-serif;
-                    font-size: clamp(30px 10vw 80px);
+                    font-size: clamp(30px, 10vw, 80px);
                     font-weight: 700;
-                    line-height: 100%;
                     margin: 0;
                 }
 
@@ -109,8 +130,8 @@ html {
                         background: rgba(23, 14, 49, 0.72);
                         font-family: "Inter", sans-serif;
                         font-weight: 400;
-                        font-size: clamp(10px 10vw 18px);
-                        line-height: 28px;
+                        font-size: clamp(10px, 10vw, 18px);
+                        width: 100%;
                         max-width: 375px;
                         border: none;
                         padding: 14px 16px;
@@ -123,16 +144,25 @@ html {
                                 -webkit-appearance: none;
                                 margin: 0;
                         }
+
+                        @media only screen and (max-width: 428px) {
+                            max-width: 250px;
+                            width: 100%;
+                        }
                     }
 
                     label {
                         color: rgba(222, 222, 222, 1);
                         font-family: "Inter", sans-serif;
                         font-weight: 400;
-                        font-size: clamp(8px 10vw 14px);;
-                        line-height: 20px;
+                        font-size: clamp(8px, 10vw, 14px);;
                         max-width: 375px;
                         margin: 0 0 24px;
+                        
+                        @media only screen and (max-width: 428px) {
+                            max-width: 150px;
+                            width: 100%;
+                        }
                     }
 
                     button {
@@ -141,8 +171,7 @@ html {
                         background: rgba(238, 238, 238, 1);
                         font-family: "Inter", sans-serif;
                         font-weight: 700;
-                        font-size: clamp(10px 10vw 18px);
-                        line-height: 21px;
+                        font-size: clamp(10px, 10vw, 18px);
                         padding: 8px 16px;
                         max-width: 256px;
                         border: none;
@@ -158,20 +187,23 @@ html {
                 align-items: center;
                 color: rgba(255, 255, 255, 1);
                 font-family: "Roboto", sans-serif;
-                line-height: 100%;
                 font-weight: 700;
+
+                @media only screen and (max-width: 900px) {
+                    margin-top: 20px;
+                }
 
                 img {
                     max-width: 250px;
-                    height: 250px;
+                    width: 100%;
                 }
 
                 h2 {
-                    font-size: clamp(30px 10vw 80px);
+                    font-size: clamp(30px, 10vw, 80px);
                 }
 
                 p {
-                    font-size: clamp(18px 10vw 40px);
+                    font-size: clamp(18px, 10vw, 40px);
                     padding: 0 3px 0 4px;
                     
                     span {
@@ -185,8 +217,7 @@ html {
                     background: rgba(238, 238, 238, 1);
                     font-family: "Inter", sans-serif;
                     font-weight: 700;
-                    font-size: clamp(10px 10vw 18px);
-                    line-height: 21px;
+                    font-size: clamp(10px, 10vw, 18px);
                     padding: 8px 16px;
                     max-width: 256px;
                     border: none;
